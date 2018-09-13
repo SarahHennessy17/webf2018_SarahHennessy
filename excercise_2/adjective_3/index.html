@@ -5,14 +5,73 @@
 </head>
 <style type="text/css">
 	
+	body {
+		background-color: #9AFF7F;
+		font-family: sans-serif;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 30%;
+		color: #3C4739;
+/*		overflow: hidden;*/
+	}
+
+	#container {
+		position: fixed;
+		margin: 3vh;
+		background-color: #D6FFCB;
+		border: 10px solid #4D7F3F;
+		padding: 2vh;
+		max-width: 45%;
+		height: 85vh;
+	}
+
+	a {
+		text-decoration: none;
+		color: #7BCC65;
+	}
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p {
+		max-width: 90%;
+		margin-left: 5%; 
+	}
+
+	ul {
+		margin-left: 5%;
+	}
+
 	img {
-		width: 30%;
+		max-height: 85vh;
+		max-width: 40%;
+		vertical-align: top;
+		margin: 3vh;
+		margin-left: 90%;
+		margin-bottom: 10%;
+		float: right;
+		display: inline block;	
+		border: 10px solid #4D7F3F;
+	}
+
+	.img {
+		position: relative;
+		top: 0;
+		z-index: 1;
 	}
 
 </style>
 <body>
 
-<div class="container">
+	<div class="img">
+	<img src="images/book2.jpg">
+	<img src="images/book1.png">
+	<img src="images/book3.jpg">
+</div>
+
+<div id="container">
 
 		<a href="../index.html">BACK</a>
 
@@ -24,13 +83,9 @@
 
 	<ul><li>Originally written by Ernest Lawerence Thayer for The San Francisco Examiner published on June 3, 1888. </li></ul>
 
-<div class="img container">
-	<img src="images/book2.jpg">
-		<img src="images/book1.png">
-	<img src="images/book3.jpg">
-</div>
+	</div>
 
-</div>
+
 
 
 </body>
