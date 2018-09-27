@@ -45,8 +45,8 @@ $("#divide").mouseenter(function() {
   saberSound.play();
 });
 
-$("#divide").mouseexit(function() {
-  saberSound.pause();
+$("#divide").mouseleave(function() {
+  saberSound.pause(4000);
 });
 
 // explosion
