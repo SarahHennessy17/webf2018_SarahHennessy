@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: black;
+	overflow: hidden;
 }
 
 /*BACKGROUND*/
@@ -32,12 +33,43 @@ body {
 	/*background-color: red;*/
 	width:7vw;
 	height: 100vh;
-	opacity: .2
+	opacity: .2;
+	z-index: 400;
 }
+
+/*stars*/
+
+#stars {
+	width: 100vw;
+	height: 100vh;
+	margin-top: -100vh;
+	/*background-color: blue;*/
+	z-index: 5;
+}
+
+.stars {
+	width: 1vh;
+	height: 1vh;
+	border-radius: 50%;
+	background-color: white;
+	margin: 1%;
+	position: relative;
+	float: left;
+	animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+  100% {opacity: .8;}
+  75% {opacity: .75;}
+  50% {opacity: .5;}
+  25% {opacity: .75;}
+  0% {opacity: .8;}
+}
+
 
 /*explosion*/
 
-.click-explosion {
+.light {
   width: 25%;
   height: 55%;
   border-radius: 50%;

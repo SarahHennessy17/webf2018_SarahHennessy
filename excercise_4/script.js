@@ -49,10 +49,10 @@ $("#divide").mouseleave(function() {
   saberSound.pause(4000);
 });
 
-// explosion
+// the light when you click
 
 $(document).mousedown(function(e) {
-  var elem = $('<div class="click-explosion"></div>').appendTo('body');
+  var elem = $('<div class="light"></div>').appendTo('body');
   var mouseX = e.pageX - 200;
   var mouseY = e.pageY - 240;
   elem.css('top', mouseY);
@@ -84,40 +84,27 @@ $('#red').on( "dblclick", function(e) {
   console.log("spinnn");
 });
 
+// STARS 
 
+function addStars() {
+  var randomStars = Math.random()*100;
+  $("#stars").append("<div class='stars'></div>");
+  // console.log(randomStars)
+}
 
+function starSpace() {
+  var starsHeight = Math.random()*1000;
+  var starsWidth = Math.random()*1000;
 
+  $('.stars').css('margin-right',starsHeight);
+  $('.stars').css('margin-top',starsHeight);
 
+}
 
-
-
-// Lightsabers touching? true/false
-
-// 	function collision($vader, $obi) {
-//       var l1 = $vader.offset().left;
-//       var top1 = $vader.offset().top;
-//       var h1 = $vader.outerHeight(true);
-//       var w1 = $vader.outerWidth(true);
-//       var add1 = top1 + h1;
-//       var add2 = l1 + w1;
-//       var l2 = $obi.offset().left;
-//       var top2 = $obi.offset().top;
-//       var h2 = $obi.outerHeight(true);
-//       var w2 = $obi.outerWidth(true);
-//       var add3 = top2 + h2;
-//       var add4 = l2 + w2;
-
-//       if (add1 < top2 || top1 > add3 || add2 < l2 || l1 > add4) return false;
-//       return true;
-//     } 
-
-// window.setInterval(function() {
-//     $('#result').text(collision($('#red'), $('#blue')));}, 20);
-// });
-
-
-// STARS $("#balloon-container").append("<div class='balloon'></div>");
-
+window.setInterval(function() {
+    addStars();
+    starSpace();
+  }, 600);
 
 
 

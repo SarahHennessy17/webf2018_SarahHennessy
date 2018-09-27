@@ -113,7 +113,29 @@ setInterval(function(){
     }, 1000)
 
 
+// Lightsabers touching? true/false
 
+//  function collision($vader, $obi) {
+//       var l1 = $vader.offset().left;
+//       var top1 = $vader.offset().top;
+//       var h1 = $vader.outerHeight(true);
+//       var w1 = $vader.outerWidth(true);
+//       var add1 = top1 + h1;
+//       var add2 = l1 + w1;
+//       var l2 = $obi.offset().left;
+//       var top2 = $obi.offset().top;
+//       var h2 = $obi.outerHeight(true);
+//       var w2 = $obi.outerWidth(true);
+//       var add3 = top2 + h2;
+//       var add4 = l2 + w2;
+
+//       if (add1 < top2 || top1 > add3 || add2 < l2 || l1 > add4) return false;
+//       return true;
+//     } 
+
+// window.setInterval(function() {
+//     $('#result').text(collision($('#red'), $('#blue')));}, 20);
+// });
 
 
 
