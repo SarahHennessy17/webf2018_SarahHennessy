@@ -74,15 +74,23 @@ $('#blue').on( "dblclick", function(e) {
   console.log("spinnn");
 });
 
-$('#red').on( "dblclick", function(e) {
-  var saberSwing = new Audio("sounds/saber_swing.m4a");
-  
-  saberSwing.play();
-  
-  $('#red').css({'transform' : 'rotate('+ 341 +'deg)'});
-
-  console.log("spinnn");
+$(function(){
+    n = -379;
+    $('#red').on('dblclick', function(){
+        $(this).css({
+            'transform':'rotate('+n+'deg)',
+            '-ms-transform':'rotate('+n+'deg)',
+            '-moz-transform':'rotate('+n+'deg)',
+            '-o-transform':'rotate('+n+'deg)'
+        });
+        n-=360;
+    });
 });
+
+
+
+
+
 
 // STARS 
 

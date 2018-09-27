@@ -138,6 +138,28 @@ setInterval(function(){
 // });
 
 
+// spin
+
+$('#blue').on( "dblclick", function(e) {
+
+  var saberSwing = new Audio("sounds/saber_swing.m4a");
+  
+  saberSwing.play();
+  $('#blue').css({'transform' : 'rotate('+ 379 +'deg)'});
+
+  console.log("spinnn");
+});
+
+$('#red').on( "dblclick", function(e) {
+  var saberSwing = new Audio("sounds/saber_swing.m4a");
+  
+  saberSwing.play();
+  
+  $('#red').css({'transform' : 'rotate('+ 341 +'deg)'});
+
+  console.log("spinnn");
+});
+
 
 
 
