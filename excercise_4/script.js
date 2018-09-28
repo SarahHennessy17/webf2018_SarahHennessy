@@ -64,32 +64,31 @@ $(document).mousedown(function(e) {
 
 // spin
 
-$('#blue').on( "dblclick", function(e) {
-
-  var saberSwing = new Audio("sounds/saber_swing.m4a");
-  
-  saberSwing.play();
-  $('#blue').css({'transform' : 'rotate('+ 379 +'deg)'});
-
-  console.log("spinnn");
-});
-
 $(function(){
-    n = -379;
+    redn = -379;
     $('#red').on('dblclick', function(){
         $(this).css({
-            'transform':'rotate('+n+'deg)',
-            '-ms-transform':'rotate('+n+'deg)',
-            '-moz-transform':'rotate('+n+'deg)',
-            '-o-transform':'rotate('+n+'deg)'
+            'transform':'rotate('+redn+'deg)',
+            '-ms-transform':'rotate('+redn+'deg)',
+            '-moz-transform':'rotate('+redn+'deg)',
+            '-o-transform':'rotate('+redn+'deg)'
         });
-        n-=360;
+        redn-=360;
     });
 });
 
-
-
-
+$(function(){
+    bluen = 379;
+    $('#blue').on('dblclick', function(){
+        $(this).css({
+            'transform':'rotate('+bluen+'deg)',
+            '-ms-transform':'rotate('+bluen+'deg)',
+            '-moz-transform':'rotate('+bluen+'deg)',
+            '-o-transform':'rotate('+bluen+'deg)'
+        });
+        bluen-=360;
+    });
+});
 
 
 // STARS 

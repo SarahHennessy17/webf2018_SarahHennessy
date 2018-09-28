@@ -160,6 +160,16 @@ $('#red').on( "dblclick", function(e) {
   console.log("spinnn");
 });
 
+// $('#blue').on( "dblclick", function(e) {
+
+//   var saberSwing = new Audio("sounds/saber_swing.m4a");
+  
+//   saberSwing.play();
+//   $('#blue').css({'transform' : 'rotate('+ 379 +'deg)'});
+
+//   console.log("spinnn");
+// });
+
 
 
 

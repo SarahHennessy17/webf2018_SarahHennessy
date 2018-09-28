@@ -29,7 +29,7 @@ body {
 }
 
 #divide {
-	margin-left: 45%;
+	margin-left: 50vw;
 	/*background-color: red;*/
 	width:7vw;
 	height: 100vh;
@@ -96,6 +96,7 @@ body {
 #red {
 	left: 100vw;
 	transform: rotate(-19deg);
+	margin: -3.5% 0% 0% -1%;
 	transition: transform 1s;
 }
 
