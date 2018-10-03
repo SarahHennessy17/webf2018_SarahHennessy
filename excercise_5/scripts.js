@@ -27,6 +27,12 @@ $( document).ready(function(){
         $("#screensaver").css("opacity", 1);
     });
 
+    $("#screensaver").click(function() {
+        window.open('https://sarahhennessy1.github.io/collection/board.html', '_blank' 
+);
+    });
+
+
   	//Slideshow auto start
 
 	function screensaver() {
@@ -42,7 +48,7 @@ $( document).ready(function(){
 
 	setInterval(function() {
         screensaver()
-    }, 3000);
+    }, 5000);
 
     $(document).mousemove(function() {
         time = 0;

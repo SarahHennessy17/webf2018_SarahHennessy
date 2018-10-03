@@ -10,17 +10,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
 <body>
 
-	<!-- background -->
+	<!-- FINAL -->
 	<div id="loser" class="hide">GAME OVER
-		<div id="final"></div>
-		<a href="index.html">PLAY AGAIN</a>
+		<div class="final"></div>
+		<a href="index.html" id="lose">PLAY AGAIN</a>
 	</div>
+	<div id="win" class="hide">YOU WIN
+		<div class="final"></div>
+		<a href="index.html" id="winner">PLAY AGAIN</a>
+	</div>
+
+	<!-- background -->
 	<div class="veil hide"></div>
 	<div id="stars"></div>
 	<div id="good"><!-- blue/right --></div>
 	<div id="bad"><!-- red/left -->
 		<div class="remote">
-			<div id="laser"></div>
+			<div id="laser" class="hide"></div>
 		</div>
 	</div> 
 
@@ -32,6 +38,7 @@
 			</div>
 
 <div id="score">0</div>
+<div id="start">IGNITE SABER TO BEGIN</div>
 
 </body>
 </html>

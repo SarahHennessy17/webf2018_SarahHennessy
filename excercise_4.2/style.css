@@ -6,7 +6,7 @@ body {
 	/*overflow: hidden;*/
 }
 
-/*COUNT*/
+/*MISC GAME ITEMS*/
 
 #score {
 	position: fixed;
@@ -14,6 +14,19 @@ body {
 	top: 2vw;
 	color: white;
 	font-size: 5vw;
+}
+
+#start {
+	position: fixed;
+	right: 30vw;
+	top: 22.5vw;
+	font-size: 2.5vw;
+	text-align: center;
+	width: 40%;
+	color: black;
+		-webkit-text-stroke-width: .5px;
+   		-webkit-text-stroke-color: #FFD700;
+		text-decoration: none;
 }
 
 /*BACKGROUND*/
@@ -50,14 +63,25 @@ body {
 	top: 25vh;
 	font-size: 7vw;
 	text-align: center;
+	background-color: black;
+	border: .1px red solid;
 	color: black;
-	background-color: #d91f26;
-	border: 1px black solid;
+		-webkit-text-stroke-width: 1px;
+   		-webkit-text-stroke-color: #d91f26;
+		text-decoration: none;
 }
 
 .hide {
 	display: none;
 }
+
+#lose {
+		color: black;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: #d91f26;
+		text-decoration: none;
+}
+
 
 .veil {
 	position: fixed;
@@ -65,19 +89,45 @@ body {
 	width: 200vw;
 	height: 100vh;
 	z-index: 100;
-	background-color: white;
-	opacity: .1;
+	background-color: grey;
+	opacity: .05;
 }
 
 .final {
-	font-size: 2.5vw;
+	font-size: 5vw;
 }
 
 a {
 	text-decoration: none;
 	font-size: 5vw;
-	color: black;
 }
+
+/*WINNER*/
+
+#win {
+	position: fixed;
+	position: center middle;
+	z-index: 200;
+	top: 25vh;
+	font-size: 7vw;
+	text-align: center;
+	width: 100vw;
+	background-color: black;
+	border: 1px #FFD700 solid;
+	z-index: 1000;
+		color: black;
+		-webkit-text-stroke-width: .5px;
+   		-webkit-text-stroke-color: #FFD700;
+		text-decoration: none;
+}
+
+#winner {
+		color: black;
+		-webkit-text-stroke-width: .5px;
+		-webkit-text-stroke-color: #FFD700;
+		text-decoration: none;
+}
+
 
 /*stars*/
 
@@ -139,6 +189,8 @@ a {
 	right: 50%;
 	transition: .5s ease;
 	z-index: 190;
+	background: radial-gradient(circle at 100px 100px, white, black);
+	border: 1px solid grey;
 }
 
 #laser {

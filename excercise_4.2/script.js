@@ -40,19 +40,6 @@ $(document).mousedown(function(e) {
 // spin
 
 $(function(){
-    redn = -379;
-    $('#red').on('dblclick', function(){
-        $(this).css({
-            'transform':'rotate('+redn+'deg)',
-            '-ms-transform':'rotate('+redn+'deg)',
-            '-moz-transform':'rotate('+redn+'deg)',
-            '-o-transform':'rotate('+redn+'deg)'
-        });
-        redn-=360;
-    });
-});
-
-$(function(){
     bluen = 379;
     $('#blue').on('dblclick', function(){
         $(this).css({
@@ -64,6 +51,19 @@ $(function(){
         bluen-=360;
     });
 });
+
+//LET THE GAME BEGIN
+       $("#laser").css("-webkit-animation-play-state", "paused");
+
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                setInterval(function(){
+                    positionRandomly();
+                    $("#laser").css("-webkit-animation-play-state", "running");
+                    $("#laser").removeClass("hide");
+                    $("#start").addClass("hide");
+                    }, 1000)}
+        });
 
 
 // STARS 
@@ -93,11 +93,10 @@ var divs = $('.remote');
 var winWidth = $('#bad').innerWidth;
 var winHeight = window.innerHeight;
 
-positionRandomly();
-
-setInterval(function(){
-      positionRandomly();
-}, 1000)
+// taken out so that saber igniting can start game
+// setInterval(function(){
+//       positionRandomly();
+// }, 1000)
 
 function addMore( object, container ) {
   container.append( object );
@@ -139,7 +138,6 @@ function removeLaser() {
 }, 600)
 }
 
-
 //score
 
   var ticker = 0;
@@ -152,6 +150,10 @@ function removeLaser() {
     var saberHit = new Audio("sounds/laser_hit.m4a");
     saberHit.play();
 
+    if (ticker >= 100){
+      youWin();
+    }
+
     }
 
 // YOU LOSE
@@ -161,23 +163,35 @@ function youLose() {
   $(".veil").removeClass("hide");
   $("#good").addClass("hide");
   $("#score").addClass("hide");
-  $("#final").text("FINAL SCORE : " + ticker);
+  $(".final").text("FINAL SCORE : " + ticker);
+  darkSound();
+  }
+  
+function darkSound() {
+  var dark = new Audio("sounds/darkWins.mp3");
+  dark.play();
+}
+
+function youWin() {
+  $("#win").removeClass("hide");
+  $(".veil").removeClass("hide");
+  $("#good").addClass("hide");
+  $("#score").addClass("hide");
+  $(".final").text("FINAL SCORE : " + ticker);
+  stop.laserWhere();
   }
 
  function laserWhere() {
 
-   var laserLocation = $("#laser").offset();
-   var laserleft = laserLocation.left;
+  var laserLocation = $("#laser").offset();
+  var laserleft = laserLocation.left;
   
   if (laserleft <= -100)
     youLose();
  }
 
-  setInterval(function(){
-      
-  laserWhere();    
 
-}, 600)
+setInterval(function(){laserWhere();}, 600);
 
 
 
