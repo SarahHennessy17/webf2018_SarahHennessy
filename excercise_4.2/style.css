@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	background-color: black;
 	font-family: 'Roboto', sans-serif;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 /*MISC GAME ITEMS*/
@@ -18,11 +18,11 @@ body {
 
 #start {
 	position: fixed;
-	right: 30vw;
+	right: 22.5vw;
 	top: 22.5vw;
 	font-size: 2.5vw;
 	text-align: center;
-	width: 40%;
+	width: 50%;
 	color: black;
 		-webkit-text-stroke-width: .5px;
    		-webkit-text-stroke-color: #FFD700;
@@ -119,13 +119,25 @@ a {
 		-webkit-text-stroke-width: .5px;
    		-webkit-text-stroke-color: #FFD700;
 		text-decoration: none;
+			animation: grow 10s ease;
 }
+
+@keyframes grow {
+  100% {font-size: 7vw;}
+  75% {font-size: 6vw;}
+  50% {font-size: 5vw;}  
+  25% {font-size: 4vw;}
+  0% {font-size: 3vw;}
+}
+
 
 #winner {
 		color: black;
+		font-size: 7vw;
 		-webkit-text-stroke-width: .5px;
 		-webkit-text-stroke-color: #FFD700;
 		text-decoration: none;
+			animation: grow 10s ease;
 }
 
 

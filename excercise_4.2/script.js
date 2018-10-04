@@ -94,6 +94,7 @@ var winWidth = $('#bad').innerWidth;
 var winHeight = window.innerHeight;
 
 // taken out so that saber igniting can start game
+
 // setInterval(function(){
 //       positionRandomly();
 // }, 1000)
@@ -113,6 +114,7 @@ function positionRandomly() {
 
       thisDiv.style.top = randomTop +"px";
       thisDiv.style.left = randomLeft +"px";
+
   }
 }
 
@@ -127,15 +129,31 @@ function getRandomNumber(min, max) {
     saberHit();
   });
 
+
+// ATTEMPT TO MAKE IT USE THE SABER
+
+  // function hitLaser() {
+  //   var saberSpot = $(".plasma").offset();
+  //   var laserSpot = $("#laser").offset();
+
+  //   console.log( "saber left:" + saberSpot.left, "saber top:" + saberSpot.top, "laser left:" + laserSpot.left, "laser top:" + laserSpot.top);
+
+  //   if (saberSpot == laserSpot) {
+  //     removeLaser();
+  //     saberHit();
+  //   }
+  // }
+
+  //   setInterval(function(){
+  //    hitLaser();
+  //   }, 600)
+
+
 function removeLaser() {
-
   $("#laser").addClass("hide");
-
-  setInterval(function(){
+    setInterval(function(){
       $("#laser").removeClass("hide");
-
-
-}, 600)
+    }, 600)
 }
 
 //score
@@ -150,7 +168,7 @@ function removeLaser() {
     var saberHit = new Audio("sounds/laser_hit.m4a");
     saberHit.play();
 
-    if (ticker >= 100){
+    if (ticker >= 10){
       youWin();
     }
 
@@ -159,6 +177,7 @@ function removeLaser() {
 // YOU LOSE
 
 function youLose() {
+  clearInterval(findLaser);
   $("#loser").removeClass("hide");
   $(".veil").removeClass("hide");
   $("#good").addClass("hide");
@@ -172,14 +191,25 @@ function darkSound() {
   dark.play();
 }
 
+// YOU WIN
+
 function youWin() {
+  clearInterval(findLaser);
   $("#win").removeClass("hide");
   $(".veil").removeClass("hide");
   $("#good").addClass("hide");
+  $(".remote").addClass("hide");
   $("#score").addClass("hide");
   $(".final").text("FINAL SCORE : " + ticker);
-  stop.laserWhere();
+  themeSound();
   }
+
+function themeSound() {
+  var theme = new Audio("sounds/winner.mp3");
+  theme.play();
+}
+
+// CHECK IF LASER WENT PAST YOU
 
  function laserWhere() {
 
@@ -191,10 +221,13 @@ function youWin() {
  }
 
 
-setInterval(function(){laserWhere();}, 600);
+var findLaser = setInterval(function(){laserWhere();}, 600);
 
+setTimeout(fade_out, 2000);
 
-
+function fade_out() {
+ $("#start").text("IGNITE SABER TO BEGIN");
+}
 
 
 
