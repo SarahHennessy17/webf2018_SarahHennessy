@@ -212,7 +212,7 @@ a {
 	margin-top: 3%;
 	right: 17vw;
 	position: fixed;
-	animation: shoot 5s infinite;
+	animation: shoot 7s infinite;
 	/*transform: 5s ease infinite;*/
 	margin-right: 13%;
 	z-index: 100;

@@ -168,7 +168,7 @@ function removeLaser() {
     var saberHit = new Audio("sounds/laser_hit.m4a");
     saberHit.play();
 
-    if (ticker >= 10){
+    if (ticker >= 2){
       youWin();
     }
 
