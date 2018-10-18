@@ -8,11 +8,22 @@ body {
   overflow: hidden;
 }
 
+img {
+	width: 30vw;
+	height: 30vw;
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+}
+
+/*CATS*/
+
 .cat1 {
 /*	background-color: red;*/
 	width: 33.3vw;
 	height: 100vh;
 	float: left;
+	overflow: scroll;
+	text-align: center;
 }
 
 .cat2 {
@@ -20,6 +31,8 @@ body {
 	width: 33.3vw;
 	height: 100vh;
 	float: left;
+	overflow: scroll;
+	text-align: center;
 }
 
 .cat3 {
@@ -28,5 +41,28 @@ body {
 	height: 100vh;
 	float: left;
 	top: 0;
+	overflow: scroll;
+	text-align: center;
+	vertical-align: center;
 }
+
+.hide {
+	display: none;
+}
+
+/*GO*/
+
+#go {
+	
+}
+
+
+
+
+
+
+
+
+
+
 
