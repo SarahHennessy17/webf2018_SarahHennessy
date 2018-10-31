@@ -98,6 +98,16 @@ var testSubjects = [
    "Year": 2018,
    "URL": "https://www.imdb.com/title/tt7784604/",
    "image": "https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_SY1000_SX675_AL_.jpg"
+ },
+ {
+   "Title": "Peter Pan",
+   "Mood": "family",
+   "Your Rating": 10,
+   "Title Type": "movie",
+   "Genres": "Animation, Adventure, Family, Fantasy, Musical",
+   "Year": 1953,
+   "URL": "https://www.imdb.com/title/tt0046183/",
+   "image": "https://m.media-amazon.com/images/M/MV5BMzIwMzUyYTUtMjQ3My00NDc3LWIyZjQtOGUzNDJmNTFlNWUxXkEyXkFqcGdeQXVyMjA0MDQ0Mjc@._V1_SY1000_CR0,0,668,1000_AL_.jpg"
  }
  ]
  
@@ -201,5 +211,15 @@ var testSubjects = [
    "Year": 2018,
    "URL": "https://www.imdb.com/title/tt2649356/",
    "image": "https://m.media-amazon.com/images/M/MV5BZDk2NzY1MGQtYTA2MS00ZDcxLWJiMzYtNWRmMGU3ZjQ0YTFjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX675_AL_.jpg"
+ },
+ {
+   "Title": "Fuller House",
+   "Mood": "family",
+   "Your Rating": 5,
+   "Title Type": "tvSeries",
+   "Genres": "Comedy, Family",
+   "Year": 2016,
+   "URL": "https://www.imdb.com/title/tt3986586/",
+   "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzU5MzA0MF5BMl5BanBnXkFtZTgwODgyOTg1MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
  }
 ]

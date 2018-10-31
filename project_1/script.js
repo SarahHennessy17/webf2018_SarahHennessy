@@ -1,20 +1,25 @@
 $( document).ready(function(){
 
 	var emojiMedium = ["emojis/tv.png","emojis/film.png"];
-	var emojiMood = ["emojis/cry.png","emojis/gross.png","emojis/fear.png","emojis/sleep.png","emojis/love.png","emojis/adventure.png","emojis/think.png","emojis/big.png","emojis/dark.png","emojis/laugh.png",];
+	var emojiMood = ["emojis/cry.png","emojis/gross.png","emojis/fear.png","emojis/sleep.png","emojis/love.png","emojis/adventure.png","emojis/think.png","emojis/big.png","emojis/dark.png","emojis/family.png","emojis/laugh.png"];
 	var moodChoice = ["laugh", "cry", "gross", "fear", "sleep", "love", "adventure", "think", "big", "dark", "family"];
 	var moodCount = emojiMood.length;
 	var mediaCount = emojiMedium.length;
 	var moodTicker = 0;
 	var mediumTicker = 0;
 
+	// test
+
+	// console.log(tvData[11]["Title"], movieData[10]["Title"]);
+
 	// Remove Guide
 
-	$('body').click(function(e){
-		$(".guide").addClass("hide");
-		$("#go").removeClass("hide");
-	});
+	function timer() {
+  	$(".guide").addClass("hide");
+	// $("#go").removeClass("hide");
+	}
 
+	window.setInterval(timer, 10000);
 
 	//SELECTING MEDIA EMOJI
 
@@ -40,6 +45,16 @@ $( document).ready(function(){
 		}
 	});
 
+	//AGAIN
+
+	$('.again').click(function(e){
+		$(".cat1").removeClass("hide");
+		$(".cat2").removeClass("hide");
+		$(".cat3").removeClass("hide");
+		$(".meta").addClass("hide");
+		$(".link").addClass("hide");
+	});
+
 	//RECOMMEND ME A THING
 
 	$('#go').mousedown(function(e){
@@ -48,40 +63,46 @@ $( document).ready(function(){
 		$(".cat3").addClass("hide");
 		$(".show").removeClass("hide");
 		$(".again").removeClass("hide");
+		$(".meta").removeClass("hide");
+		$(".link").removeClass("hide");
 		thisMovie();
 	});
 
 	function thisMovie() {
-		var movieNumber = moodTicker;
-		var tvNumber = moodTicker;
-		// var tvNumber = [Math.floor(Math.random() * testTV.length)];
-		// var pickMood = moodChoice[moodTicker];
-		// var chosenMood = testTV[tvNumber]["Mood"];
-		// var result = testTV.filter(obj => {return chosenMood === pickMood});
+		var movieNumber = [Math.floor(Math.random() * movieData.length)];
+		var tvNumber = [Math.floor(Math.random() * tvData.length)];
+		var pickMood = moodChoice[moodTicker];
+		var tvChosenMood = tvData[tvNumber]["Mood"];
+		var movieChosenMood = movieData[movieNumber]["Mood"];
 
-		// console.log(pickMood, chosenMood, tvNumber, result);
-
-		if (mediumTicker >= 1) {
-			$("#name").html(testTV[tvNumber]["Title"]);
-			$(".picture").attr("src", testTV[tvNumber]["image"]);
-			$(".frontpic").attr("src", testTV[tvNumber]["image"]);
+		//good for single
+		if (tvChosenMood == pickMood && mediumTicker >= 1) {
+			console.log("you did it with" + tvData[tvNumber]["Title"]);
+			$("#name").html(tvData[tvNumber]["Title"]);
+			$("#director").html(tvData[tvNumber]["Directors"]);
+			$("#genre").html(tvData[tvNumber]["Genres"]);
+			$("#year").html(tvData[tvNumber]["Year"]);
+			$(".picture").attr("src", tvData[tvNumber]["image"]);
+			$(".frontpic").attr("src", tvData[tvNumber]["image"]);
 				$('.show').click(function(e){
-					console.log(testSubjects[tvNumber]["URL"]);
+					$(".link").attr("href", tvData[tvNumber]["URL"]);
 				});
 		}
-		else {
-			$("#name").html(testSubjects[movieNumber]["Title"]);
-			$(".picture").attr("src", testSubjects[movieNumber]["image"]);
-			$(".frontpic").attr("src", testSubjects[movieNumber]["image"]);
+		else if (movieChosenMood == pickMood && mediumTicker == 0) {
+			$("#name").html(movieData[movieNumber]["Title"]);
+			$("#director").html(movieData[movieNumber]["Directors"]);
+			$("#genre").html(movieData[movieNumber]["Genres"]);
+			$("#year").html(movieData[movieNumber]["Year"]);
+			$(".picture").attr("src", movieData[movieNumber]["picture"]);
+			$(".frontpic").attr("src", movieData[movieNumber]["picture"]);
+				$('.show').click(function(e){
+					$(".link").attr("href", movieData[movieNumber]["URL"]);
+				});
 			}
+		else {
+			thisMovie();
+		}
 	}
-
-
-
-
-
-
-
 
 
 

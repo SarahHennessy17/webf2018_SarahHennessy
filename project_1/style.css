@@ -1,11 +1,13 @@
 body {
-  background: #75a9ff;
+  /*background: #75a9ff;*/
+  background-color: black;
   height: 100vh;
   width: 100vw;
-  box-shadow: inset 0 0 200px #4286f4;
+  /*box-shadow: inset 0 0 200px #292929;*/
   margin: 0;
   padding: 0;
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   color: white;
   overflow: hidden;
 }
@@ -14,20 +16,31 @@ body {
 
 .guide {
 	position: fixed;
-	background-color: #2878fc;
-	box-shadow: inset 0 0 200px #4286f4;
-	border-radius: 50%;
+	border-radius: 25%;
 	height: 25vw;
 	width: 25vw;
 	text-align: center;
-	top: 25vh;
+	top: -15vh;
 	margin-left: 4vw;
-	z-index: 900;
+	z-index: 200;
+	animation: fade 15s ease;
+}
+
+@keyframes fade {
+  0% {color: white;}
+  100% {color: black;}
 }
 
 .words {
 	margin-top: 45%;
-	font-size: 1.5vw;
+	font-size: 2.5vw;
+}
+
+.words2 {
+	margin-top: 38%;
+	margin-left: 1.5vw;
+	max-width: 90%;
+	font-size: 2.5vw;
 }
 
 /*CATS*/
@@ -36,6 +49,7 @@ body {
 /*	background-color: red;*/
 	width: 33.3vw;
 	height: 100vh;
+	z-index: 100;
 	float: left;
 	overflow: scroll;
 	text-align: center;
@@ -45,6 +59,7 @@ body {
 /*	background-color: blue;*/
 	width: 33.3vw;
 	height: 100vh;
+	z-index: 100;
 	float: left;
 	overflow: scroll;
 	text-align: center;
@@ -54,6 +69,7 @@ body {
 /*	background-color: yellow;*/
 	width: 33.3vw;
 	height: 100vh;
+	z-index: 100;
 	float: left;
 	top: 0;
 	overflow: scroll;
@@ -65,6 +81,7 @@ body {
 	height: 30vw;
 	top: 23vh;
 	margin-left: -14vw;
+	z-index: 1000;
 }
 
 .hide {
@@ -77,10 +94,20 @@ body {
 	position: fixed;
 	font-size: 15vw;
 	top: 30vh;
-	margin-left: 3%;
+	margin-left: 3%;	
+	/*animation: fade-in 1s ease;*/
+	z-index: 1000;
+		-webkit-text-stroke-width: 1px;
+   		-webkit-text-stroke-color: black;
 }
 
+/*@keyframes fade-in {
+  100% {color: white;}
+  0% {color: black;}
+}*/
+
 .show {
+	z-index: 10;
 	width: 100vw;
 	height: 100vh;
 	margin: 0;
@@ -89,28 +116,49 @@ body {
 
 .picture {
 	position: fixed;
-	z-index: 10;
-	width: 100vw;
+	z-index: 1;
+	width: 105vw;
 	min-height: 100vh;
-	top: 0vh;
-	filter: blur(5px);
+	top: -1vh;
+	left: -2.5vw;
+	filter: blur(10px);
 }
 
 .frontpic {
+	display: inline block;
 	position: relative;
-	left: 30vw;
-	z-index: 100;
+	text-align: center;
+	left: 33vw;
+	z-index: 50;
 	height: 100vh;
 	top: 0vh;
+	box-shadow: 0px 5px 5px black;
 }
 
-#name {
+.frontpic:hover {
+	box-shadow: 0px 12px 12px black;
+	height: 101vh;
+	z-index: 100;
+}
+
+/*#name {
 	position: relative;
 	font-size: 7vw;
-	top: 30vh;
-	/*left: 40vw;*/
+	top: -65vh;
 	text-align: center;
-	z-index: 900;
+	z-index: 70;
+	color: white;
+	-webkit-text-stroke: .5px black;
+	text-transform: uppercase;
+}*/
+
+.meta {
+	position: fixed;
+	top: 0;
+	font-size: 1vw;
+	line-height: 3vh;
+	margin-left: 1vw;
+	z-index: 70;
 	color: white;
 	-webkit-text-stroke: .5px black;
 }
