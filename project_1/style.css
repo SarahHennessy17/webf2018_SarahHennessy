@@ -155,11 +155,13 @@ body {
 	position: fixed;
 	top: 0;
 	font-size: 1vw;
-	line-height: 3vh;
+	line-height: 4vh;
 	margin-left: 1vw;
 	z-index: 70;
 	color: white;
+	max-width: 30vw;
 	-webkit-text-stroke: .5px black;
+	transition: linear 1s;
 }
 
 #info {

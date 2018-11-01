@@ -55,6 +55,16 @@ $( document).ready(function(){
 		$(".link").addClass("hide");
 	});
 
+	//SHOW METADATA
+
+	$('.frontpic').mouseover(function(e){
+		$(".meta").removeClass("hide");
+	});
+
+	$('.frontpic').mouseout(function(e){
+		$(".meta").addClass("hide");
+	});
+
 	//RECOMMEND ME A THING
 
 	$('#go').mousedown(function(e){
@@ -63,7 +73,6 @@ $( document).ready(function(){
 		$(".cat3").addClass("hide");
 		$(".show").removeClass("hide");
 		$(".again").removeClass("hide");
-		$(".meta").removeClass("hide");
 		$(".link").removeClass("hide");
 		thisMovie();
 	});
