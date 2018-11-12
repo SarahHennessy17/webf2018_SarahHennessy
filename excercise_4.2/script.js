@@ -79,7 +79,6 @@ function starSpace() {
 
   $('.stars').css('margin-right',starsHeight);
   $('.stars').css('margin-top',starsHeight);
-
 }
 
 window.setInterval(function() {
@@ -124,29 +123,32 @@ function getRandomNumber(min, max) {
 
 //LASER HIT SABER
 
-  $('#laser').mouseenter(function(e){
-    removeLaser();
-    saberHit();
-  });
-
+  // $('#laser').mouseenter(function(e){
+  //   removeLaser();
+  //   saberHit();
+  // });
 
 // ATTEMPT TO MAKE IT USE THE SABER
 
-  // function hitLaser() {
-  //   var saberSpot = $(".plasma").offset();
-  //   var laserSpot = $("#laser").offset();
+  function hitLaser() {
+    var saberSpot = $(".plasma").offset();
+    var laserSpot = $("#laser").offset();
 
-  //   console.log( "saber left:" + saberSpot.left, "saber top:" + saberSpot.top, "laser left:" + laserSpot.left, "laser top:" + laserSpot.top);
+    // console.log( "saber left:" + saberSpot.left, "saber top:" + saberSpot.top, "laser left:" + laserSpot.left, "laser top:" + laserSpot.top);
 
-  //   if (saberSpot == laserSpot) {
-  //     removeLaser();
-  //     saberHit();
-  //   }
-  // }
+    if (saberSpot.top <= laserSpot.top && saberSpot.left >= laserSpot.left  ) {
+      removeLaser();
+      saberHit();
+    }
+  }
 
-  //   setInterval(function(){
-  //    hitLaser();
-  //   }, 600)
+  $('body').mousemove(function(e){
+    hitLaser();
+  });
+
+    // setInterval(function(){
+    //  hitLaser();
+    // }, 600)
 
 
 function removeLaser() {
@@ -168,7 +170,7 @@ function removeLaser() {
     var saberHit = new Audio("sounds/laser_hit.m4a");
     saberHit.play();
 
-    if (ticker >= 2){
+    if (ticker >= 10){
       youWin();
     }
 
@@ -178,6 +180,7 @@ function removeLaser() {
 
 function youLose() {
   clearInterval(findLaser);
+  $(".remote").addClass("hide");
   $("#loser").removeClass("hide");
   $(".veil").removeClass("hide");
   $("#good").addClass("hide");
@@ -195,6 +198,7 @@ function darkSound() {
 
 function youWin() {
   clearInterval(findLaser);
+  var ticker = 10;
   $("#win").removeClass("hide");
   $(".veil").removeClass("hide");
   $("#good").addClass("hide");

@@ -73,6 +73,7 @@ body {
 
 .hide {
 	display: none;
+	transition: 1s ease-in;
 }
 
 #lose {
