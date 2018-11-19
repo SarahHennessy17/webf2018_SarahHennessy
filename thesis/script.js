@@ -27,9 +27,9 @@ slider.oninput = function() {
     if (newData["asian"] >= 0.5) {
       $(".asian").removeClass("hide");
     }
-    if (pickedYear == 12) {
-      $(".data").addClass("hide");
-    }
+    // if (pickedYear == 12) {
+    //   $(".data").addClass("hide");
+    // }
     else {
       $(".asian").addClass("hide");
       $(".data").removeClass("hide");
