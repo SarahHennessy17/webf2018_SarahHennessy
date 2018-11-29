@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: courier;
+	overflow: hidden;
+	font-size: 1.25vw;
+}
+
+button {
+	width: 90vw;
+	height: 3vh;
+	position: fixed;
+	text-align: center;
+	bottom: 5vh;
+	right: 5vw;
+	box-shadow: 1px 1px 1px grey;
+}
+
+#text, #slug, #type{
+	margin: 3vw;
+}
+
+.title {
+	text-align: center;
+	position: relative;
+	top: 40vh;
+	transition: 1s ease;
+}
+
+.hide {
+	display: none;
+}
