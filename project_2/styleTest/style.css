@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+/*	overflow: hidden;*/
+}
+
+.portfolioPiece {
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+/*	background-color: red;*/
+}
+
+.hide {
+	display: none;
+}
+
+.name {
+	position: fixed;
+/*	color: white;
+   	mix-blend-mode: difference;*/
+	font-family: helvetica;
+	margin-left: 10vw;
+	z-index: 1000;
+}
+
+.picture {
+	position: fixed;
+	text-align: center;
+	height: 100vh;
+	top: 0;
+	z-index: 1;
+}
+
+.demo {
+	position: relative;
+	z-index: 1000;
+	margin-top: 70vh;
+	text-align: center; 
+	width: 280px; 
+	float: right;
+	color: white;
+}
+
+
+.sesame {
+	background-color: #00a770;
+	color: #fee303;
+}
+
+
+
+
+
+
+
