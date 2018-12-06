@@ -1,10 +1,20 @@
 body {
 	margin: 0;
+	margin-bottom: 15vh;
 	padding: 0;
 	color: black;
 	font-family: courier;
 	overflow: hidden;
 	font-size: 1.25vw;
+}
+
+a {
+	/*text-decoration: none;*/
+	color: black;
+}
+
+p {
+	opacity: 1;
 }
 
 button {
@@ -15,19 +25,79 @@ button {
 	bottom: 5vh;
 	right: 5vw;
 	box-shadow: 1px 1px 1px grey;
+	z-index: 1000;
 }
 
-#text, #slug, #type{
+#text, #slug, #type, .type{
 	margin: 3vw;
+	margin-top: 0;
+	margin-left: 10vw;
+}
+
+.name {
+	position: relative;
+	text-align: left;
+	margin-left: 35vw;
+}
+
+.dialouge {
+	position: relative;
+	text-align: left;
+	left: 20vw;
+	/*white-space: wrap;*/
 }
 
 .title {
 	text-align: center;
 	position: relative;
-	top: 40vh;
-	transition: 1s ease;
+	top: 39vh;
+	transition: .5s ease;
 }
 
 .hide {
 	display: none;
 }
+
+#cheater {
+	background-color: white;
+	position: fixed;
+	height: 100vh;
+	width: 5vw;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+
+
+
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 5s steps(70, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0% {border-right-color: black;}
+  50% {border-right-color: transparent;}
+  100% {border-right-color: black;}
+}
+
+
+
+
+
+
+
+
