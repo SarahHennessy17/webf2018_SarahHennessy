@@ -11,6 +11,7 @@ body {
 a {
 	/*text-decoration: none;*/
 	color: black;
+	font-weight: bold;
 }
 
 p {
@@ -40,11 +41,19 @@ button {
 	margin-left: 35vw;
 }
 
+.end {
+	position: relative;
+	text-align: left;
+	margin-left: 35vw;
+	font-weight: bold;
+}
+
 .dialouge {
 	position: relative;
 	text-align: left;
 	left: 20vw;
-	/*white-space: wrap;*/
+	width: 35%;/*
+	white-space: wrap;*/
 }
 
 .title {
