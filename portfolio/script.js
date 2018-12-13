@@ -24,7 +24,7 @@ function typeWriter() {
 }
 
 function removeType() {
-   $(".dialouge").removeClass("typewriter");
+   $("p").removeClass("typewriter");
    typeSound.pause();
    typeSound.currentTime = 0;
 }
