@@ -6,16 +6,19 @@ body {
 	font-family: courier;
 	overflow: hidden;
 	font-size: 1.25vw;
+	cursor: text;
 }
 
 a {
 	/*text-decoration: none;*/
 	color: black;
 	font-weight: bold;
+	cursor: cell; 
 }
 
 p {
 	opacity: 1;
+	cursor: text;
 }
 
 button {
@@ -27,6 +30,7 @@ button {
 	right: 5vw;
 	box-shadow: 1px 1px 1px grey;
 	z-index: 1000;
+	cursor: text;
 }
 
 #text, #slug, #type, .type{
@@ -92,8 +96,8 @@ button {
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0;}
+  to { width: 100%;}
 }
 
 /* The typewriter cursor effect */

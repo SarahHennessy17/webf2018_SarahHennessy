@@ -19,7 +19,14 @@ function typeWriter() {
     i++; 
 
     $("#type").append("<p class='typewriter " + scriptType + "''>" + scriptPick + "</p>");
+    typeEffect();
+    setTimeout(removeType, 7000);
+}
 
+function removeType() {
+   $(".dialouge").removeClass("typewriter");
+   typeSound.pause();
+   typeSound.currentTime = 0;
 }
 
 function typeEffect() {
@@ -34,11 +41,11 @@ function pageScroll() {
 
 $('button').mousedown(function(e){
 	$(".title").css("opacity", "0");
-	
+
 	ticker++;
 
 	if (ticker >= count){
-      location.reload();
+     setTimeout(location.reload.bind(location), 1000);
     }
 
 	typeWriter();
@@ -46,11 +53,11 @@ $('button').mousedown(function(e){
 	});
 
 
+
+
+
+
+
+
+
 });
-
-
-
-
-
-
-
