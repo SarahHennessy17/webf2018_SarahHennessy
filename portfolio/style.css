@@ -49,15 +49,15 @@ p {
 }
 
 .one {
-	right: 40vw;
+	left: 52%;
 }
 
 .two {
-	right: 47vw;
+	left: 47%;
 }
 
 .three {
-	right: 54vw;
+	left: 42%;
 }
 
 .button:hover {
