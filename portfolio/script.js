@@ -39,7 +39,7 @@ function pageScroll() {
 	}
 
 
-$('button').mousedown(function(e){
+$('.button').mousedown(function(e){
 	$(".title").css("opacity", "0");
 
 	ticker++;
