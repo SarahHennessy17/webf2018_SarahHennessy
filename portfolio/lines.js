@@ -21,7 +21,7 @@ var text = [
   },
   {
    "type": "action",
-   "txt": "SARAH walks over to her " + '<a href="https://www.linkedin.com/in/sarahhennessy1/">LinkedIn</a>' +  " and gestures to the bio.",
+   "txt": "SARAH walks over to her " + '<a href="https://www.linkedin.com/in/sarahhennessy1/" target=”_blank”>LinkedIn</a>' +  " and gestures to the bio.",
   },
   {
    "type": "name",
@@ -73,7 +73,7 @@ var text = [
   },
   {
    "type": "action",
-   "txt": "She gestures to her " + '<a href="https://medium.com/@sarhennessy17">PaleyMatters</a>' +  " articles."
+   "txt": "She gestures to her " + '<a href="https://medium.com/@sarhennessy17" target=”_blank”>PaleyMatters</a>' +  " articles."
   },
   {
    "type": "name",
